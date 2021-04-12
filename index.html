@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Family Book</title>
+</head>
+<body>
+    <h1>My Family Book</h1>
+    <img id="picture"
+        src="book.jpg"
+        style="object-fit: cover;
+                object-position: top;"
+        width="300" 
+        height="300"
+    >
+    <h3 id="names"></h3>
+    <button onclick="next()">Next</button>
+    <script>
+        let images = ["book.jpg", "dad.jpg", "mom.png"]
+        let names = ["", "Vijay Kumar Panguluri", "Lavanya Panguluri"]
+        let slide = 1;
+            function next() {
+                document.getElementById("picture").src = images[slide];
+                document.getElementById("names").textContent = names[slide];
+                slide = slide + 1;
+                if (slide > 2) {
+                    slide = 0;
+                }}
+    </script>
+</body>
+</html>
